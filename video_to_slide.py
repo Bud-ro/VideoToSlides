@@ -27,7 +27,7 @@ def read_frame(capture_obj, gray=False):
     return (Image.fromarray(current_frame))
 
 def main(args):
-    """Argument 1 is the video to convert. Argument 2 is playback rate. Arg 2 is threshold needed to the slide add."""
+    """Arg 1 is the video to convert. Arg 2 is playback rate. Arg 3 is threshold needed to the slide add."""
     if len(args) < 1:
         return
     print(args[0])
@@ -77,7 +77,7 @@ def main(args):
             break
 
         frame_no = frame_no + FRAME_RATE*PLAY_BACK_RATE
-        
+
         if frame_no >= FRAME_COUNT:
             frame_no = FRAME_COUNT - 1
 
